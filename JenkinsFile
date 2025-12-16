@@ -1,0 +1,32 @@
+pipeline {
+    agent any
+    tools {
+        maven "Maven"
+    }
+    stages {
+        stage('Code Clone') {
+            steps {
+                git 'https://github.com/musabsyd/maven-webapp.git'
+                echo 'Code Cloned Successfully'
+            }
+        }
+        stage('Build') {
+            steps {
+                sh 'mvn clean package'
+                echo 'Code Build Successfully'
+            }
+        }
+        stage('docker image'){
+            steps {
+                sh 'docker build -t musabsyed/mavenwebapp .'
+                echo 'image built successfully'
+            }
+        }
+        stage('docker run'){
+        steps {
+            sh 'docker run -d -p 80:8080 musabsyed/mavenwebapp'
+            echo 'container depolyed successfully'
+          }
+       }
+    }
+}
