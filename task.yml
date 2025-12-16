@@ -11,9 +11,9 @@
        src: target
        dest: /home/ansadmin
     - name : Build image
-      command: docker build -t ashokit/mavenwebapp .
+      command: docker build -t musabsyed/mavenwebapp .
     - name : Push Docker Image
-      command: docker push ashokit/mavenwebapp
+      command: docker push musabsyed/mavenwebapp
 - name: Second Play - K8s Deployment
   hosts: eks
   tasks:
@@ -23,3 +23,4 @@
        dest: /home/ansadmin
    - name : K8S Deployment
      command: kubectl apply -f k8s-deploy.yml
+
