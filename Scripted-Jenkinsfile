@@ -2,7 +2,7 @@ node {
     def mvnPath
     
     stage('git clone process') {
-        git 'https://github.commusabsyd/maven-webapp.git'
+        git 'https://github.com/musabsyd/maven-webapp.git'
     }
     
     stage('Maven build'){
@@ -11,4 +11,5 @@ node {
         sh "${mvnPath} clean package"
     }    
 }
+
 
