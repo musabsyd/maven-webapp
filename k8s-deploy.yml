@@ -18,7 +18,7 @@ spec:
   spec: 
     containers:
     - name: mavenwebappcontainer
-      image: ashokit/maven-webapp:v3
+      image: musabsyed/maven-webapp
       imagePullPolicy: Always
       ports:
       - containerPort: 8080
@@ -35,4 +35,5 @@ spec:
    - port: 80
      targetPort: 8080
 ...
+
 
