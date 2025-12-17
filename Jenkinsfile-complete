@@ -1,0 +1,40 @@
+pipeline {
+    agent any
+    tools {
+        maven "Maven"
+    }
+    stages {
+        stage('Cloning') {
+            steps {
+                git 'https://github.com/musabsyd/maven-webapp.git'
+                echo 'Code Cloned Succesfully'
+            }
+        }
+        stage('mvn build') {
+            steps {
+                sh 'mvn clean package'
+                echo 'maven build successfull'
+            }
+        } 
+        stage('Code review') {
+            steps {
+                withSonarQubeEnv('Sonar') {
+                sh 'mvn sonar:sonar'
+                echo 'Code review successfull'
+                }
+            }
+        }  
+        stage('docker build') {
+            steps {
+                sh 'docker build -t musabsyed/mavenwebapp .'
+                echo 'docker image built successfully'
+            }
+        }
+        stage('docker launch') {
+            steps {
+                sh 'docker run -d -p 80:8080 musabsyed/mavenwebapp'
+                echo 'docker container launched successfully'
+            }
+        }  
+    }
+}
