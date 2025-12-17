@@ -23,10 +23,10 @@ pipeline {
             }
         }
         stage('docker run'){
-        steps {
-            sh 'docker run -d -p 80:8080 musabsyed/mavenwebapp'
-            echo 'container depolyed successfully'
-          }
-       }
+           steps {
+                sh 'docker run -d -p 80:8080 musabsyed/mavenwebapp'
+                echo 'container depolyed successfully'
+            }
+        }
     }
 }
