@@ -30,10 +30,19 @@ pipeline {
                 echo 'docker image built successfully'
             }
         }
-        stage('docker launch') {
+
+        stage('docker push'){
+           steps {
+              withCredentials([string(credentialsId: 'dockerpass', variable: 'dockerpass')]) {
+                sh 'echo $dockerpass | docker login -u musabsyed --password-stdin'
+                sh 'docker push musabsyed/mavenwebapp'
+            }
+          }
+       }
+        stage('k8s-deployment') {
             steps {
-                sh 'docker run -d -p 80:8080 musabsyed/mavenwebapp'
-                echo 'docker container launched successfully'
+                sh 'kubectl apply -f k8s-deploy.yml'
+                echo 'deployment completed successfully'
             }
         }  
     }
