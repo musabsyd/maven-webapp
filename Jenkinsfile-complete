@@ -31,6 +31,13 @@ pipeline {
             }
         }
 
+        stage('Trivy') {
+            steps {
+                sh 'trivy musabsyed/mavenwebapp'
+                echo 'trivy scan completed'
+            }
+        }
+
         stage('docker push'){
            steps {
               withCredentials([string(credentialsId: 'dockerpass', variable: 'dockerpass')]) {
