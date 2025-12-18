@@ -167,49 +167,61 @@ pipeline {
 ✔ CI/CD Pipeline Deploying App to Kubernetes
 
 ---
-🔹 Step 12: Access Application in Browser
+Here’s **Step 12** added in the **same GitHub-ready Markdown style**, clean and professional 👌
+You can append this directly to your existing `README.md`.
 
-After successful deployment to the EKS cluster, the application should be accessible via the Load Balancer URL.
+---
 
-🌐 Application Access URL
+## 🔹 Step 12: Access Application in Browser
+
+After successful deployment to the **EKS cluster**, the application should be accessible via the **Load Balancer URL**.
+
+### 🌐 Application Access URL
+
+```text
 http://<LOAD-BALANCER-DNS>/<context-path>/
+```
 
+📌 **Example:**
 
-📌 Example:
-
+```text
 http://a1b2c3d4e5f6.elb.amazonaws.com/mavenwebapp/
+```
 
-🔍 How to Get Load Balancer URL
+---
+
+### 🔍 How to Get Load Balancer URL
 
 Run the following command on the Jenkins server or EKS management host:
 
+```bash
 kubectl get svc
+```
 
+Look for the **EXTERNAL-IP** of the service of type `LoadBalancer`.
 
-Look for the EXTERNAL-IP of the service of type LoadBalancer.
+---
 
-✅ Verification Checklist
+### ✅ Verification Checklist
 
 ✔ Application deployed successfully
 ✔ Kubernetes service is running
 ✔ Load Balancer is created
 ✔ Application opens in browser
 
-🎉 Setup Completed Successfully!
+---
+
+## 🎉 Setup Completed Successfully!
 
 You have successfully implemented:
 
-Jenkins CI/CD Pipeline
+* Jenkins CI/CD Pipeline
+* Maven Build Automation
+* Docker Image Creation
+* Deployment to AWS EKS
+* Application Access via Load Balancer
 
-Maven Build Automation
+🚀 **End-to-End CI/CD with Jenkins + Docker + Kubernetes (EKS) is DONE!**
 
-Docker Image Creation
-
-Deployment to AWS EKS
-
-Application Access via Load Balancer
-
-🚀 End-to-End CI/CD with Jenkins + Docker + Kubernetes (EKS) is DONE!
-
-
+---
 
