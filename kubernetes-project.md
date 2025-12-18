@@ -167,9 +167,6 @@ pipeline {
 ✔ CI/CD Pipeline Deploying App to Kubernetes
 
 ---
-Here’s **Step 12** added in the **same GitHub-ready Markdown style**, clean and professional 👌
-You can append this directly to your existing `README.md`.
-
 ---
 
 ## 🔹 Step 12: Access Application in Browser
