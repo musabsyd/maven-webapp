@@ -9,7 +9,7 @@
 📌 **Official AWS Documentation**
 👉 [https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
 
-### 🧰 Execute the Following Commands
+### 🧰 Execute the Following Commands  
 
 ```bash
 sudo apt install unzip -y
@@ -221,4 +221,5 @@ You have successfully implemented:
 🚀 **End-to-End CI/CD with Jenkins + Docker + Kubernetes (EKS) is DONE!**
 
 ---
+
 
