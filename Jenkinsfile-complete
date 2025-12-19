@@ -33,7 +33,7 @@ pipeline {
 
         stage('Trivy') {
             steps {
-                sh 'trivy musabsyed/mavenwebapp'
+                sh 'trivy image musabsyed/mavenwebapp'
                 echo 'trivy scan completed'
             }
         }
