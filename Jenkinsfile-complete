@@ -18,7 +18,7 @@ pipeline {
         } 
         stage('Code review') {
             steps {
-                withSonarQubeEnv('Sonar') {
+                withSonarQubeEnv('sonar') {
                 sh 'mvn sonar:sonar'
                 echo 'Code review successfull'
                 }
@@ -40,8 +40,8 @@ pipeline {
 
         stage('docker push'){
            steps {
-              withCredentials([string(credentialsId: 'dockerpass', variable: 'dockerpass')]) {
-                sh 'echo $dockerpass | docker login -u musabsyed --password-stdin'
+              withCredentials([string(credentialsId: 'dockerpass', variable: 'docker-pass')]) {
+                sh 'echo $docker_pass | docker login -u musabsyed --password-stdin'
                 sh 'docker push musabsyed/mavenwebapp'
             }
           }
