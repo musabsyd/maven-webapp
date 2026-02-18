@@ -4,7 +4,7 @@
 
 ---
 
-<img width="1817" height="710" alt="image" src="https://github.com/user-attachments/assets/90b1317e-9ef3-4bbd-af70-de02a07384ef" />
+<img width="1872" height="797" alt="image" src="https://github.com/user-attachments/assets/75d90be5-4767-4a34-beec-d84184c69715" />
 
 
 
@@ -226,6 +226,7 @@ You have successfully implemented:
 🚀 **End-to-End CI/CD with Jenkins + Docker + Kubernetes (EKS) is DONE!**
 
 ---
+
 
 
 
