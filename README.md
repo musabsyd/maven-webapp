@@ -137,7 +137,7 @@ pipeline {
 
         stage('Clone Repo') {
             steps {
-                git 'https://github.com/musabsyed/maven-webapp.git'
+                git 'https://github.com/musabsyd/maven-webapp.git'
             }
         }
 
