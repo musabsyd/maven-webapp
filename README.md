@@ -1,6 +1,6 @@
 ---
 
-# 🚀 Jenkins CI/CD with AWS EKS – Installation & Pipeline Setup
+# 🚀 Jenkins CI/CD with AWS EKS – Installation & Pipeline Setup project
 
 ---
 
