@@ -6,7 +6,7 @@
 
 ## 🔹 Step 8: Install AWS CLI on Jenkins Server
 
-📌 **Official AWS Documentation**
+📌 **Official AWS Documentation for cli**
 👉 [https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
 
 ### 🧰 Execute the Following Commands
